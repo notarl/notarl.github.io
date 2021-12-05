@@ -14,8 +14,8 @@
 				if (!formText) {
 					document.getElementById("outputText").innerHTML = 'Input is required';
 				} else {
-					var count = formText.split([\s,\n.]+).length; // Will split based on commas, periods, spaces and newlines.
-					document.getElementById("outputText").innerHTML = "".concat('Number of words in form: ', count);
+					var wordCount = formText.split([\s,\n.]+).length; // Will split based on commas, periods, spaces and newlines.
+					document.getElementById("outputText").innerHTML = 'Number of words in form: ' + 3;
 				}
 			}
 		</script>
