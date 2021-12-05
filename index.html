@@ -11,7 +11,11 @@
 		<script>
 			function getWordCount() {
 				var formText = document.getElementById("formText").value;
-				document.getElementById("outputText").innerHTML = formText;
+				if (!formText) {
+					document.getElementById("outputText").innerHTML = 'Input is required';
+				} else {
+					document.getElementById("outputText").innerHTML = formText;
+				}
 			}
 		</script>
 	</body>
