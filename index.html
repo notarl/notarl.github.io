@@ -14,7 +14,7 @@
 				if (!formText) {
 					document.getElementById("outputText").innerHTML = 'Input is required';
 				} else {
-					var words = formText.split('[\s,\n.]');
+					var words = formText.split(/[\s,\n.]/);
 					var wordCount = words.length;
 					document.getElementById("outputText").innerHTML = 'Number of words in form: ' + wordCount;
 				}
