@@ -11,10 +11,12 @@
 		<script>
 			function getWordCount() {
 				var formText = document.getElementById("formText").value;
-				if (!formText) {
+				if (!formText) { // Checks truthy of formtext. If null,undefined, or "". This will determine if we show error message or display word count
 					document.getElementById("outputText").innerHTML = 'Input is required';
 				} else {
-					var wordCount = formText.split(/[\s,\n.\_\/\\]/).length;
+					//This will split based on a space, a comma, period, _, /, \, or newline. By editing the regex we can update how we want to determine what seperates a word.
+					//Then we check the length since split returns an array.
+					var wordCount = formText.split(/[\s,\n.\_\/\\]/).length; 
 					document.getElementById("outputText").innerHTML = 'Number of words in form: ' + wordCount;
 				}
 			}
